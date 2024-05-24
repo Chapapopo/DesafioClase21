@@ -1,7 +1,21 @@
+import mongoose from 'mongoose';
+import User from '../src/model/user.model';
 import assert from 'assert';
 import asyncFunction from '../src/asyncFunction';
 import chai from 'chai';
+import "../src/utilities/connection.js";
 const expect = chai.expect;
+
+mongoose.connect
+
+describe("testing Users Dao", ()=>{
+  before(function () {
+    this.userDao = new User()
+  })
+  beforeEach(function(){
+    this.timeout(5000)
+  })
+})
 
 describe('Array', function() {
   describe('#indexOf()', function() {
